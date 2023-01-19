@@ -1,0 +1,2 @@
+# rad
+radioactive admin dashboard
