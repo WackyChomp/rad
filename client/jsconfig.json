@@ -1,0 +1,9 @@
+
+// absolute sources from src directory
+
+{
+  "compilerOptions": {
+    "baseUrl": "src"
+  },
+  "include": ["src"]
+}
