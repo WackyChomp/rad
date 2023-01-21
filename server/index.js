@@ -7,7 +7,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 
 import generalRoutes from './routes/general.js';
-import clientRoutes from './routes/.client.js';
+import clientRoutes from './routes/client.js';
 import salesRoutes from './routes/sales.js';
 import managementRoutes from './routes/management.js';
 
@@ -30,3 +30,13 @@ app.use('/general', generalRoutes);
 app.use('/client', clientRoutes);
 app.use('/sales', salesRoutes);
 app.use('/management', managementRoutes);
+
+
+/* ----- Mongoose Setup */
+const PORT = process.env.PORT || 9000;
+mongoose.connect(process.env.MONGO_URL,{
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+}).then(()=>{
+    app.listen(PORT, ()=> console.log(`Server Port:${PORT}`))
+}).catch((error) => console.log(`${error} did not connect :(`));
