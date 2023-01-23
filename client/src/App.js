@@ -1,9 +1,13 @@
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import createTheme from "@mui/material/styles";
+import { createTheme } from "@mui/material/styles";
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
+import { BrowserRouter, Navigate, Routes, Route } from "react-router-dom";
 
 import { themeSettings } from "theme";    // theme.js
+
+import Dashboard from "scenes/dashboard";
+import Layout from "scenes/layout";
 
 function App() {
 
