@@ -4,7 +4,8 @@ import { createSlice } from "@reduxjs/toolkit";
 // Establish light/dark mode with redux to access state globally
 
 const initialState = {
-    mode: 'dark'
+    mode: 'dark',
+    userId: '63701cc1f03239b7f700000e',
 };
 
 export const globalSlice = createSlice({

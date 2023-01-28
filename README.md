@@ -56,15 +56,16 @@
 
 [![Product Screenshot :)][product-screenshot]](https://example.com)
 
-Brief summary here--
--
--
--
--
+
+With the amount of data that exist today, it is essential to organize the information to derive hidden information in plain sight.
+
+You can organize your data with the full-stack admin dashboard!
+
+<br>
 
 Purpose / Vision:
-* 
-* 
+* Utilize the data visualization tools to uncover hidden insights and share your findings with others.
+* Collect incoming data through the backend with MongoDB
 * 
 
 
@@ -134,10 +135,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Create landing page :o
-- [ ] 
-- [ ] 
-- [ ] 
+- [ ] Sleek client interface
+- [ ] Mobile responsive
+- [ ] Connect to MongoDB for backend
+- [ ] Add data visualization tools
 - [ ] 
     - [ ] 
     - [ ] 
