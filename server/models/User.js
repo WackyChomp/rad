@@ -36,8 +36,8 @@ const UserSchema = new mongoose.Schema(
 		transactions: Array,
 		role: {
 			type: String,
-			enum: ['user', 'admin', 'majoradmin'],
-			default: 'admin'
+			enum: ['user', 'admin', 'superadmin'],
+			default: 'admin',
 		},
 	},
 
@@ -45,5 +45,5 @@ const UserSchema = new mongoose.Schema(
 
 )
 
-const User = mongoose.model('User', userSchema)
+const User = mongoose.model('User', UserSchema)
 export default User;
