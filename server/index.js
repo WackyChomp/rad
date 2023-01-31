@@ -46,7 +46,7 @@ mongoose.connect(process.env.MONGO_URL,{
 }).then(()=>{
     app.listen(PORT, ()=> console.log(`Server Port:${PORT}`));
 
-    // ONLY ADD DATA ONCE TO AVOID DUPLICATES
-    User.insertMany(dataUser);          // from data folder index.js
+    // ONLY ADD DATA ONCE TO AVOID DUPLICATES (commented out)
+    //User.insertMany(dataUser);          // from data folder index.js
 
 }).catch((error) => console.log(`${error} did not connect :(`));

@@ -57,14 +57,15 @@
 [![Product Screenshot :)][product-screenshot]](https://example.com)
 
 
-With the amount of data that exist today, it is essential to organize the information to derive hidden information in plain sight.
+With the amount of data existing today, it becomes essential to maintain organization and decipher hidden information in plain sight.
 
-You can organize your data with the full-stack admin dashboard!
+You can achieve this with the full-stack admin dashboard!
 
 <br>
 
 Purpose / Vision:
-* Utilize the data visualization tools to uncover hidden insights and share your findings with others.
+* Utilize data visualization tools to uncover hidden insights
+* Satisfying user experience through sleek modern and responsive UI
 * Collect incoming data through the backend with MongoDB
 * 
 
