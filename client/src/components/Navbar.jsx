@@ -6,7 +6,7 @@ import { setMode } from 'state';
 import FlexBetween from './FlexBetween';
 import { AppBar, Toolbar, IconButton, InputBase, useTheme } from '@mui/material';
 
-const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
+const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
   return (
@@ -44,6 +44,47 @@ const Navbar = ({ isSidebarOpen, setIsSidebarOpen }) => {
           <IconButton>
             <SettingsOutlined sx={{ fontSize:'20px' }} />
           </IconButton>
+
+          <FlexBetween>
+            <Button 
+              onClick={handleClick} 
+              sx={{ 
+                display:'flex', 
+                justifyContent:'space-between', 
+                alignItems:'center',
+                textTransform:'none',
+                gap:'1rem'
+              }}
+            >
+              <Box
+                component='img'
+                alt='profile'
+                src='https://upload.wikimedia.org/wikipedia/commons/e/e0/Color_icon_azure.png'
+                height='30px'
+                width='30px'
+                borderRadius='50%'
+                sx={{ objectFit: 'cover' }}
+              />
+              <Box textAlign='left'>
+                <Typography 
+                  fontWeight='bold' 
+                  fontSize='0.8rem' 
+                  sx={{ color: theme.palette.secondary[100] }}
+                >
+                  {user.name}
+                </Typography>
+                <Typography 
+                  fontSize='0.7rem' 
+                  sx={{ color: theme.palette.secondary[200] }}
+                >
+                  {user.occupation}
+                </Typography>
+              </Box>
+              <ArrowDropDownOutlined 
+                sx={{ color: theme.palette.secondary[300], fontSize:'25px' }}
+              />
+            </Button>
+          </FlexBetween>
 
         </FlexBetween>
       

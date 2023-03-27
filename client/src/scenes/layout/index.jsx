@@ -20,16 +20,20 @@ const Layout = () => {
   return (
     <Box display={isNonMobile ? 'flex' : 'block'} width='100%' height='100%'>
       <Sidebar 
+        user={ data || {}}
         drawerWidth='300px'
         isNonMobile={isNonMobile}
         isSidebarOpen={isSidebarOpen}
         setIsSidebarOpen={setIsSidebarOpen}
       />
-      <Navbar 
-        isSidebarOpen={isSidebarOpen}
-        setIsSidebarOpen={setIsSidebarOpen}
-      />
-      <Outlet />
+      <Box>
+        <Navbar 
+          user={ data || {}}
+          isSidebarOpen={isSidebarOpen}
+          setIsSidebarOpen={setIsSidebarOpen}
+        />
+        <Outlet />
+      </Box>
     </Box>
   )
 }
