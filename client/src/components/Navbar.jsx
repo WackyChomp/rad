@@ -4,11 +4,17 @@ import { useDispatch } from 'react-redux';
 
 import { setMode } from 'state';
 import FlexBetween from './FlexBetween';
-import { AppBar, Toolbar, IconButton, InputBase, useTheme } from '@mui/material';
+import { Box, Button, Typography, Menu, MenuItem, AppBar, Toolbar, IconButton, InputBase, useTheme } from '@mui/material';
 
 const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
   const dispatch = useDispatch();
   const theme = useTheme();
+
+  const [anchorEl, setAnchorEl] = useState(null);   // dropdown menu
+  const isOpen = Boolean(anchorEl);
+  const handleClick= (event) => setAnchorEl(event.currentTarget);
+  const handleClose= () => setAnchorEl(null);
+
   return (
     <AppBar
       sx={{ position:'static', background:'none', boxShadow:'none' }}
@@ -84,6 +90,16 @@ const Navbar = ({ user, isSidebarOpen, setIsSidebarOpen }) => {
                 sx={{ color: theme.palette.secondary[300], fontSize:'25px' }}
               />
             </Button>
+            
+            <Menu
+              anchorEl={anchorEl}
+              open={isOpen}
+              onClose={handleClose}
+              anchorOrigin={{ vertical:'bottom', horizontal:'center' }}
+            >
+              <MenuItem onClick={handleClose}>Log Out</MenuItem>
+            </Menu>
+          
           </FlexBetween>
 
         </FlexBetween>
