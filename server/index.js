@@ -14,8 +14,9 @@ import managementRoutes from './routes/management.js';
 
 // data imports
 import User from './models/User.js';
-import { dataUser } from './data/index.js'
-
+import { dataProduct, dataProductStat, dataUser } from './data/index.js';
+import Product from './models/Product.js';
+import ProductStat from './models/ProductStat.js';
 
 
 /* ----- Configurations ----- */
@@ -46,7 +47,10 @@ mongoose.connect(process.env.MONGO_URL,{
 }).then(()=>{
     app.listen(PORT, ()=> console.log(`Server Port:${PORT}`));
 
-    // ONLY ADD DATA ONCE TO AVOID DUPLICATES (commented out)
+    // ONLY ADD DATA ONCE TO AVOID DUPLICATES (comment out after saving to mongoDB)
     //User.insertMany(dataUser);          // from data folder index.js
+    //Product.insertMany(dataProduct);
+    //ProductStat.insertMany(dataProductStat);
+
 
 }).catch((error) => console.log(`${error} did not connect :(`));
