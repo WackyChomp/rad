@@ -4,8 +4,8 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
-  <a href="https://github.com/WackyChomp/rad">
-    <img src="" alt="Logo" width="80" height="80">
+  <a href="https://github.com/WackyChomp/rad" style='color: crimson;'>
+    <font size='6'>Rad</font>
   </a>
 
   <h3 align="center">Full-Stack Dashboard</h3>
@@ -37,10 +37,6 @@
     </li>
     <li>
       <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
     </li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
@@ -93,12 +89,12 @@ This section includes a list major frameworks/libraries used in this project:
 
 ### Prerequisites / Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
+1. Obtain free MongoDB URL cluster at [MongoDB](https://mongodb.com)
 2. Clone the repo
    ```sh
    git clone https://github.com/WackyChomp/rad
    ```
-3. Install NPM packages into each client and server directories
+3. Install NPM packages into each <u>client</u> and <u>server</u> directories
    ```sh
    npm install
    ```
@@ -127,13 +123,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [ ] Sleek client interface
 - [ ] Mobile responsive
-- [ ] Connect to MongoDB for backend
+- [x] Connect to MongoDB for backend
 - [ ] Add data visualization tools
 - [ ] 
     - [ ] 
     - [ ] 
 
-See the [open issues](https://github.com/WackyChomp/rad/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/WackyChomp/rad/issues) for a full list of proposed features or known issues.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -143,7 +139,7 @@ See the [open issues](https://github.com/WackyChomp/rad/issues) for a full list 
 ## Contributing
 
 Any suggestions or feedback for improvement? <br>
-Go on ahead and fork the repo to create a pull request. You can also simply open an issue with the tag "enhancement".
+Go on ahead and fork the repo to create a pull request. You can also open an issue with the tag "enhancement".
 Lastly, be sure to star this project if you enjoyed or found it helpful!
 
 1. Fork the Project
