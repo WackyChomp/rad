@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Divider, Drawer, IconButton, List, ListItem, ListItemButton, ListItemIcon, ListItemText, Typography, useTheme } from '@mui/material';
-import { SettingsOutlined, ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, RecceiptLongOutlined, PublicOutlined, PointOfSaleOutlined, TodayOutlined, CalendarMonthOutlined, AdminPanelSettingsOutlined, TrendingUpOutlined, PieChartOutlined, Home, ReceiptLongOutlined } from '@mui/icons-material';
+import { SettingsOutlined, ChevronLeft, ChevronRightOutlined, HomeOutlined, ShoppingCartOutlined, Groups2Outlined, PublicOutlined, PointOfSaleOutlined, TodayOutlined, CalendarMonthOutlined, AdminPanelSettingsOutlined, TrendingUpOutlined, PieChartOutlined, Home, ReceiptLongOutlined } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import FlexBetween from './FlexBetween';
@@ -12,7 +12,7 @@ const navItems = [
   },
   {
     text: 'Clients',
-    icon: null
+    icon: <Groups2Outlined />
   },
   {
     text: 'Products',
@@ -20,11 +20,11 @@ const navItems = [
   },
   {
     text: 'Sales',
-    icon: null
+    icon: <PointOfSaleOutlined />
   },
   {
     text: 'Customers',
-    icon: null
+    icon: <Home />
   },
   {
     text: 'Transaction',
@@ -32,7 +32,7 @@ const navItems = [
   },
   {
     text: 'Geography',
-    icon: null
+    icon: <PublicOutlined />
   },
   {
     text: 'Overview',
@@ -56,7 +56,7 @@ const navItems = [
   },
   {
     text: 'Management',
-    icon: null
+    icon: <SettingsOutlined />
   },
   {
     text: 'Performance',
