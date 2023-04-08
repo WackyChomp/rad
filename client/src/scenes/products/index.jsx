@@ -71,6 +71,7 @@ const Products = () => {
   const { data, isLoading } = useGetProductsQuery();
   console.log('data', data);
 
+  const isNonMobile = useMediaQuery('(min-width:1000px)')
 
   return (
     <Box>
@@ -79,10 +80,13 @@ const Products = () => {
         <Box 
           mt='20px' 
           display='grid' 
-          gridTemplateColumns='repeat(4, minmax(0, 1fr)'
+          gridTemplateColumns='repeat(4, minmax(0, 1fr))'
           justifyContent='space-between'
           rowGap='20px'
-          columnGap='1.7%'
+          columnGap='1.2%'
+          sx={{
+            '& > div': { gridColumn: isNonMobile ? undefined : 'span 4' }
+          }}
         >
           {data.map(
             ({

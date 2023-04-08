@@ -52,18 +52,19 @@
 
 [![Product Screenshot :)][product-screenshot]](https://example.com)
 
+Tired of looking through rows and columns of cells on a spreadsheet?<br>
+Looking for a new scenery to spice up your workspace?<br>
 
-With the amount of data existing today, it becomes essential to maintain organization and decipher hidden information in plain sight.
+With the amount of data existing today, it becomes overwhelming and tiresome sifting through repetitive noise. Now more than ever, it becomes essential to maintain and organize data to decipher hidden information in plain sight.
 
 You can achieve this with the full-stack admin dashboard!
 
 <br>
 
 Purpose / Vision:
-* Utilize data visualization tools to uncover hidden insights
-* Satisfying user experience through sleek modern and responsive UI
-* Collect incoming data through the backend with MongoDB
-* 
+* Utilize data visualization tools to uncover hidden insights, trends, and perspectives!
+* Satisfying user experience through sleek modern and responsive UI that makes you yearn for more!
+* Collect incoming data through the backend with MongoDB!
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -156,13 +157,16 @@ Lastly, be sure to star this project if you enjoyed or found it helpful!
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Space used to list helpful resources and provide credits to:
+Helpful resources and credits to:
 
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
 * [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
 * [Malven's Grid Cheatsheet](https://grid.malven.co/)
 * [Font Awesome](https://fontawesome.com)
+* [Google Fonts](https://fonts.google.com/)
+<br><br>
 * [Diagrams.net (previously Draw.io)](https://www.diagrams.net/)
+* [Material-UI](https://mui.com/material-ui/getting-started/overview/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
