@@ -1,6 +1,8 @@
 import Product from '../models/Product.js';
 import ProductStat from '../models/ProductStat.js';
+import User from '../models/User.js';
 
+// Products Page
 export const getProducts = async(req, res) => {
 	try{
 		const products = await Product.find();			// cycle through products
@@ -22,4 +24,15 @@ export const getProducts = async(req, res) => {
 	} catch (error){
 			res.status(404).json({ message: error.message })        // errors should be more specific in complex projects
 		}
+}
+
+
+// Customers Page
+export const getCustomers = async (req, res) => {
+	try {
+		const customers = await User.find({ role:'user' }).select('-password')
+		res.status(200).json(customers);
+	} catch (error) {
+		res.status(404).json({ message: error.message })
+	}
 }
