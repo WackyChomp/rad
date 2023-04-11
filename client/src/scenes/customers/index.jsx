@@ -29,7 +29,7 @@ const Customers = () => {
       field:'phoneNumber',
       headerName:'Phone Number',
       flex:0.5,
-      renderCells:(params) => {
+      renderCell:(params) => {
         return params.value.replace(/^(\d{3})(\d{3})(\d{4})/, '($1)$2-$3')     // regex
       },
     },
@@ -53,7 +53,33 @@ const Customers = () => {
   return (
     <Box m='1.5rem 3rem'>
       <Header title='CUSTOMERS' subtitle='List of Customers' />
-      <Box mt='50px' height='80vh'>
+      <Box
+        mt='50px' height='80vh'
+        sx={{
+          '& .MuiDataGrid-root': {
+            border: 'none'
+          },
+          '& .MuiDataGrid-cell': {
+            borderBottom: 'none'
+          },
+          '& .MuiDataGrid-columnHeaders': {
+            backgroundColor: theme.palette.background.alt,
+            color: theme.palette.secondary[100],
+            borderBottom: 'none'
+          },
+          '& .MuiDataGrid-virtualScroller': {
+            backgroundColor: theme.palette.primary.light,
+          },
+          '& .MuiDataGrid-footerContainer': {
+            backgroundColor: theme.palette.background.alt,
+            color: theme.palette.secondary[100],
+            borderTop: 'none'
+          },
+          '& .MuiDataGrid-toolbarContainer .MuiButton-text': {
+            color: `${theme.palette.secondary[200]} !important`
+          }
+        }}
+      >
         <DataGrid 
           loading={ isLoading || !data }
           getRowId={(row) => row._id}
