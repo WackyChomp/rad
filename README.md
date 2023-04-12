@@ -103,6 +103,14 @@ This section includes a list major frameworks/libraries used in this project:
    ```
     MONGODB_URL = ENTER YOUR URL FROM MONGODB;
    ```
+5. Run locally through vscode (open and run each command in separate terminals)
+   ```sh
+    cd server
+    npm start
+
+    cd client
+    npm start
+   ```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -126,7 +134,9 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Mobile responsive
 - [x] Connect to MongoDB for backend
 - [ ] Add data visualization tools
-- [ ] 
+- [ ] Finalize color scheme
+- [ ] Deploy app on hosting service (--pending--)
+- [x] Create data model to establish entity-relationship (ER) and data types
     - [ ] 
     - [ ] 
 
