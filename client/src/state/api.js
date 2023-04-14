@@ -5,7 +5,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 export const api = createApi({
 	baseQuery: fetchBaseQuery({ baseUrl: process.env.REACT_APP_BASE_URL }),
 	reducerPath: 'adminApi',
-	tagTypes: ['User', 'Products', 'Customers'],
+	tagTypes: ['User', 'Products', 'Customers', 'Transactions'],
 	endpoints: (build) => ({
 		getUser: build.query({
 				query: (id) => `general/user/${id}`,      //server index.js -> server routes general.js -> server controllers general.js
@@ -16,10 +16,18 @@ export const api = createApi({
 			provideTags: ["Products"],
 		}),
 		getCustomers: build.query({
-			query: () => 'client/customers',		// server index.js -> server routes client.js -> server controller clinet.js
+			query: () => 'client/customers',		// server index.js -> server routes client.js -> server controller client.js
 			providesTags: ['Customers'],
+		}),
+		getTransactions: build.query({								// structure for having params 
+			query: ({ page, pageSize, sort, search }) => ({			// server index.js -> server routes client.js -> server controller client.js
+				url: 'client/transactions',
+				method: 'GET',
+				params: ({ page, pageSize, sort, search}),
+			}),
+			providesTags: ['Transactions']
 		})
 	})
 })
 
-export const { useGetUserQuery, useGetProductsQuery, useGetCustomersQuery } = api;          //from getUser above
+export const { useGetUserQuery, useGetProductsQuery, useGetCustomersQuery, useGetTransactionsQuery } = api;          //from getUser above
