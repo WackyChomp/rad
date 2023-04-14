@@ -27,7 +27,7 @@ const navItems = [
     icon: <Home />
   },
   {
-    text: 'Transaction',
+    text: 'Transactions',
     icon: <ReceiptLongOutlined />
   },
   {
