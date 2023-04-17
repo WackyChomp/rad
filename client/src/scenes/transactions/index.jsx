@@ -13,6 +13,7 @@ const Transactions = () => {
   const [pageSize, setPageSize] = useState(20);
   const [sort, setSort] = useState({});
   const [search, setSearch] = useState('');
+  const [searchInput, setSearchInput] = useState('');   // temporary search value , will be manipulated by DataGridCustomToolbar component onChange value
 
   const { data, isLoading } = useGetTransactionsQuery({
     page, 
@@ -96,12 +97,16 @@ const Transactions = () => {
         pagination
         page={page}
         pageSize={pageSize}
+        rowsPerPageOptions={[20, 50, 100]}
         paginationMode='server'
         sortingMode='server'
         onPageChange={(newPage) => setPage(newPage)}
         onPageSizeChange={(newPageSize) => setPageSize(newPageSize)}
         onSortModelChange={(newSortModel) => setSort(...newSortModel)}
         components={{ Toolbar: DataGridCustomToolbar }}
+        componentsProps={{
+          toolbar: { searchInput, setSearchInput, setSearch }
+        }}
       />
     </Box>
   </Box>
