@@ -54,8 +54,13 @@
 
 Tired of looking through rows and columns of cells on a spreadsheet?<br>
 Looking for a new scenery to spice up your workspace?<br>
+Look no further with RAD!
+
+<br>
 
 With the amount of data existing today, it becomes overwhelming and tiresome sifting through repetitive noise. Now more than ever, it becomes essential to maintain and organize data to decipher hidden information in plain sight.
+
+<br>
 
 You can achieve this with the full-stack admin dashboard!
 
@@ -137,6 +142,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Finalize color scheme
 - [ ] Deploy app on hosting service (--pending--)
 - [x] Create data model to establish entity-relationship (ER) and data types
+- [x] Added data visualizations
     - [ ] 
     - [ ] 
 
@@ -163,7 +169,6 @@ Lastly, be sure to star this project if you enjoyed or found it helpful!
 
 
 
-
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
@@ -177,6 +182,7 @@ Helpful resources and credits to:
 <br><br>
 * [Diagrams.net (previously Draw.io)](https://www.diagrams.net/)
 * [Material-UI](https://mui.com/material-ui/getting-started/overview/)
+* [NIVO (dataviz components)](https://nivo.rocks/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
