@@ -24,38 +24,72 @@ const Geography = () => {
           // original code snippet from ------ https://nivo.rocks/choropleth/
           <ResponsiveChoropleth  
         data={data}
+        theme={{
+          axis: {
+            domain: {
+              line: {
+                stroke: theme.palette.secondary[200]
+              }
+            },
+            legend: {
+              text: {
+                fill: theme.palette.secondary[200]
+              }
+            },
+            tick: {
+              line: {
+                stroke: theme.palette.secondary[200],
+                strokeWidth: 1,
+              },
+              text: {
+                fill: theme.palette.secondary[200]
+              }
+            }
+          },
+          legends: {
+            text: {
+              fill: theme.palette.secondary[200]
+            }
+          },
+          tooltip: {
+            container: {
+              color: theme.palette.primary.main 
+            }
+          }
+        }}
         features={geoData.features}
-        margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
-        colors="nivo"
-        domain={[ 0, 1000000 ]}
+        margin={{ top: 0, right: 0, bottom: 0, left: -50 }}
+        //colors="nivo"
+        domain={[ 0, 60 ]}       // adjust increment range for legend
         unknownColor="#666666"
         label="properties.name"
         valueFormat=".2s"
-        projectionTranslation={[ 0.5, 0.5 ]}
+        ProjectScale={150}
+        projectionTranslation={[ 0.4, 0.6 ]}    // originally .5 .5
         projectionRotation={[ 0, 0, 0 ]}
         enableGraticule={true}
         graticuleLineColor="#dddddd"
-        borderWidth={0.5}
+        borderWidth={1.5}
         borderColor="#152538"
         legends={[
             {
-                anchor: 'bottom-left',
+                anchor: 'bottom-right',
                 direction: 'column',
                 justify: true,
-                translateX: 20,
-                translateY: -100,
+                translateX: 0,
+                translateY: -125,
                 itemsSpacing: 0,
                 itemWidth: 94,
                 itemHeight: 18,
                 itemDirection: 'left-to-right',
-                itemTextColor: '#444444',
+                itemTextColor: theme.palette.secondary[200],
                 itemOpacity: 0.85,
                 symbolSize: 18,
                 effects: [
                     {
                         on: 'hover',
                         style: {
-                            itemTextColor: '#000000',
+                            itemTextColor: theme.palette.secondary.alt,
                             itemOpacity: 1
                         }
                     }
