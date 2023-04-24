@@ -12,15 +12,11 @@ const navItems = [
   },
   {
     text: 'Clients',
-    icon: <Groups2Outlined />
+    icon: null,
   },
   {
     text: 'Products',
     icon: <ShoppingCartOutlined />
-  },
-  {
-    text: 'Sales',
-    icon: <PointOfSaleOutlined />
   },
   {
     text: 'Customers',
@@ -35,8 +31,12 @@ const navItems = [
     icon: <PublicOutlined />
   },
   {
+    text: 'Sales',
+    icon: null,
+  },
+  {
     text: 'Overview',
-    icon: null
+    icon: <PointOfSaleOutlined />
   },
   {
     text: 'Daily',
@@ -47,16 +47,16 @@ const navItems = [
     icon: <CalendarMonthOutlined />
   },
   {
+    text: 'Management',
+    icon: null,
+  },
+  {
     text: 'Breakdown',
     icon: <PieChartOutlined />
   },
   {
     text: 'Admin',
     icon: <AdminPanelSettingsOutlined />
-  },
-  {
-    text: 'Management',
-    icon: <SettingsOutlined />
   },
   {
     text: 'Performance',
