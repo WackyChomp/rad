@@ -46,7 +46,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
       },
       { sales: 0, units: 0 }
     )
-  }, [data])
+  }, [data])        // eslint-disable-line react-hooks/exhausive-deps
 
   
   // fail check to see if data loads
@@ -57,25 +57,30 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
     <div>OverviewChart be right here for now :O</div>,
 
     <ResponsiveLine
-        data={data}
-        margin={{ top: 50, right: 110, bottom: 50, left: 60 }}
+        data={view === 'sales' ? totalSalesLine : totalUnitsLine}
+        margin={{ top: 20, right: 50, bottom: 50, left: 90 }}    // top: 50, right: 110, bottom: 50, left: 60
         xScale={{ type: 'point' }}
         yScale={{
             type: 'linear',
             min: 'auto',
             max: 'auto',
-            stacked: true,
+            stacked: false,     // prevent lines from stacking on top of each other
             reverse: false
         }}
         yFormat=" >-.2f"
+        curve='catmullRom'
         axisTop={null}
         axisRight={null}
         axisBottom={{
+            format: (v) => {
+              if (isDashboard) return v.slice(0,3);     // shows abbreviated months on dashboard page
+              return v;
+            },
             orient: 'bottom',
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'transportation',
+            legend: isDashboard ? '' : 'Month',     // 'transportation'
             legendOffset: 36,
             legendPosition: 'middle'
         }}
@@ -84,8 +89,8 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
             tickSize: 5,
             tickPadding: 5,
             tickRotation: 0,
-            legend: 'count',
-            legendOffset: -40,
+            legend: isDashboard ? '' : `Total ${view === 'sales' ? 'Revenue' : 'Units'} for year`,      // 'count'
+            legendOffset: -60,
             legendPosition: 'middle'
         }}
         pointSize={10}
@@ -94,13 +99,15 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
         pointBorderColor={{ from: 'serieColor' }}
         pointLabelYOffset={-12}
         useMesh={true}
-        legends={[
+        legends={
+          !isDashboard 
+          ?[
             {
                 anchor: 'bottom-right',
                 direction: 'column',
                 justify: false,
-                translateX: 100,
-                translateY: 0,
+                translateX: 40,
+                translateY: -80,
                 itemsSpacing: 0,
                 itemDirection: 'left-to-right',
                 itemWidth: 80,
