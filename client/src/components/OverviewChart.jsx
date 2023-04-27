@@ -57,6 +57,28 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
     <div>OverviewChart be right here for now :O</div>,
 
     <ResponsiveLine
+      theme={{
+        axis: {
+          domain: {
+            line: {
+              stroke: theme.palette.secondary[200]
+            }
+          },
+          legend: {
+            text: {
+              fill: theme.palette.secondary[200]
+            }
+          },
+          tick: {
+            line: {
+              stroke: theme.palette.secondary[200],
+              strokeWidth: 1,
+            },
+            text: {
+              fill: theme.palette.secondary[200]
+            }
+          }
+        }}}
         data={view === 'sales' ? totalSalesLine : totalUnitsLine}
         margin={{ top: 20, right: 50, bottom: 50, left: 90 }}    // top: 50, right: 110, bottom: 50, left: 60
         xScale={{ type: 'point' }}
@@ -126,7 +148,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
                     }
                 ]
             }
-        ]}
+        ] : undefined }
       />
 
   )

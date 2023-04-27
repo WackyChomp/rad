@@ -4,7 +4,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center" id='readme-top'>
-  <a href="https://github.com/WackyChomp/rad" style='color: crimson;'>
+  <a href="https://github.com/WackyChomp/rad" style='color: crimson'>
     <font size='6'>Rad</font>
   </a>
 
@@ -138,11 +138,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Sleek client interface
 - [ ] Mobile responsive
 - [x] Connect to MongoDB for backend
-- [ ] Add data visualization tools
 - [ ] Finalize color scheme
 - [ ] Deploy app on hosting service (--pending--)
 - [x] Create data model to establish entity-relationship (ER) and data types
-- [x] Added data visualizations
+- [ ] Added data visualizations (line / pie / geo)
+- [ ] Created home dashboard to display all data visuals
     - [ ] 
     - [ ] 
 
