@@ -46,7 +46,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {      // isDashboard i
       },
       { sales: 0, units: 0 }
     )
-  }, [data])        // eslint-disable-line react-hooks/exhausive-deps
+  }, [data])        // eslint-disable-line react-hooks/exhaustive-deps
 
   
   // fail check to see if data loads
